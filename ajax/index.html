@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Baby Yoda Infinito</title>
+  </head>
+  <style>
+    h1 {
+      text-decoration-color: aqua;
+    }
+
+    img {
+      width: 50%;
+      height: 50%;
+      margin: 40px;
+      padding: auto;
+      text-align: center;
+      box-shadow: black 0px 0px 20px;
+    }
+
+    div {
+      text-align: center;
+    }
+
+    body {
+      background-image: url("https://w0.peakpx.com/wallpaper/241/159/HD-wallpaper-black-stars-black-aesthetic.jpg");
+    }
+
+  </style>
+
+  <body>
+    <div id="container"></div>
+  </body>
+  <script>
+    var imagens = [
+      "https://i.pinimg.com/736x/4b/3b/36/4b3b3697ed58149f38ba0d1db1207512.jpg",
+      "https://www.quever.news/u/fotografias/m/2020/12/5/f768x400-4046_47949_5050.jpg",
+      "https://www.quever.news/u/fotografias/m/2020/12/5/f638x638-4047_62214_5132.png",
+      "https://colunaboraviajar.com.br/wp-content/uploads/2020/05/yy.jpg",
+      "https://static1.srcdn.com/wordpress/wp-content/uploads/2022/05/Din-Djarin-And-Grogu-Say-Goodbye-In-The-Mandalorian-Chapter-16.jpg",
+      "https://d2d7ho1ae66ldi.cloudfront.net/ArquivoNoticias/570606a5-30a3-11eb-aa6e-9587410378a2/baby-yoda.jpg",
+      "https://www.comboinfinito.com.br/principal/wp-content/uploads/2019/11/Star-Wars-8.jpg",
+      "https://www.oeduardomoreira.com.br/wp-content/uploads/2020/02/baby-yoda.jpg",
+      "https://trecobox.com.br/wp-content/uploads/2021/11/Baby-Yoda.jpg",
+      "https://lrmonline.com/wp-content/uploads/2020/12/Grogu.jpg",
+      "https://ovicio.com.br/wp-content/uploads/2020/12/20201222-the-mandalorian-grogu-baby-yoda-star-wars-1250061-1280x0-1-730x365.jpeg",
+      "https://sm.ign.com/ign_br/screenshot/default/blob_e3zw.jpg",
+      "https://disneyplusbrasil.com.br/wp-content/uploads/2021/04/mando-e-grogu-baby-yoda-1024x576.jpg",
+      "https://br.web.img3.acsta.net/r_654_368/newsv7/20/12/23/16/37/4739755.jpg",
+      "https://disneyplusbrasil.com.br/wp-content/uploads/2022/03/Baby-Yoda.jpg",
+    ];
+
+    function scrollInfinito() {
+
+      for (let i = 0; i < imagens.length; i++) {
+
+        const container = document.querySelector('div#container');
+        var randomImagens = Math.floor(Math.random() * (imagens.length));
+        const img = document.createElement('img');
+        img.src = imagens[randomImagens];
+        container.appendChild(img);
+      }
+    }
+    scrollInfinito()
+
+    window.addEventListener('scroll', () => {
+
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+        scrollInfinito();
+      }
+    })
+
+  </script>
+
+</html>
